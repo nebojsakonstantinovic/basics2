@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<p>
+  I'm server componetn and I hold ALL
+</p>
+
+
+<div class="newServerBox">
+
+  <label>Server name:</label>
+  <input type="text" name="" value="" class="form-control" (input)="onUpdateServerName($event)">
+  <input type="text" name="" value="" class="form-control" [(ngModel)]="newServerName">
+  <p>New server name: {{newServerName}}</p>
+
+
+
+
+
+  <button type="button" name="button" class="btn btn-primary" [disabled]="!allowNewServer" (click)="onAddNewServer()" >Add new Servers</button>
+
+
+  <p *ngIf="serverCreated; else serverNotCreated">{{serverCreationStatus}}</p>
+
+  <ng-template>
+    <p>there was no new servers yet</p>
+  </ng-template>
+
+</div>
+
+
+
+<app-server *ngFor="let sever of servers"></app-server>
+
+<app-server></app-server>
+<app-server></app-server>
+<app-server></app-server>
+<app-server></app-server>
