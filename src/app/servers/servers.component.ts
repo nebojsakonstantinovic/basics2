@@ -7,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
 
+/* tslint:disable:no-inferrable-types */
+
 allowNewServer: boolean = false;
-serverCreationStatus: string = "There was no new server yet";
+serverCreationStatus: string = 'There was no new server yet';
 serverCreated: boolean = false;
-newServerName: string = "name-placeholder";
+newServerName: string = 'name-placeholder';
 servers = ['TestServer', 'TestServer2', 'TestServer3'];
 
   constructor() {
@@ -26,15 +28,15 @@ servers = ['TestServer', 'TestServer2', 'TestServer3'];
 
 
 
-  onAddNewServer(){
-    this.serverCreationStatus = "New server has been created";
+  onAddNewServer() {
+    this.serverCreationStatus = 'New server has been created';
     this.serverCreated = true;
     this.servers.push(this.newServerName);
   }
 
 
 
-  onUpdateServerName($event){
+  onUpdateServerName($event) {
     this.newServerName = $event.target.value;
   }
 

@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServerComponent implements OnInit {
 
+/* tslint:disable:no-inferrable-types */
 
   serverId = 17;
   serverStatus: string = 'offline';
@@ -18,7 +19,7 @@ export class ServerComponent implements OnInit {
   ngOnInit() {
   }
 
-  getColor(){
+  getColor() {
     return this.serverStatus === 'online' ? 'green' : 'red';
   }
 
